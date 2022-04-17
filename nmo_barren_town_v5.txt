@@ -3,65 +3,65 @@
 {
   "pre_entities"
   {
-        $modify
+                $modify
 		{
-            "match"
+                        "match"
 			{
 				"model"   "models/money/goldcoin.mdl"
 			}
 			"replace"
 			{
-                "model"   "models/static/casino_coin.mdl"
+                                "model"   "models/static/casino_coin.mdl"
 				"modelscale" "2.0"
 			}
 		}
-	    $modify
+	        $modify
 		{
-            "match"
+                        "match"
 			{
 				"model"   "models/money/silvcoin.mdl"
 			}
 			"replace"
 			{
-                "model"   "models/static/casino_coin.mdl"
+                                "model"   "models/static/casino_coin.mdl"
 				"modelscale" "0.5"
 			}
 		}
-	    $modify
+	        $modify
 		{
-            "match"
+                        "match"
 			{
 				"classname" "overlord_zombie_helper"
 			}
 			"replace"
 			{
-                "max_zombie_count" "90"
+                                "max_zombie_count" "90"
 			}
 		}
-	    $modify // Destruction by mistakenly flagged pickup Without this, you can't complete it with solo
+	        $modify // Destruction by mistakenly flagged pickup Without this, you can't complete it with solo
 		{
-            "match"
+                        "match"
 			{
 				"model"   "models/props_junk/wood_crate001a.mdl"
 			}
 			"replace"
 			{
-                "physdamagescale" "0"
+                                "physdamagescale" "0"
 				"spawnflags" "256"
 				"health" "919231"
 				"OnPlayerPickup" "0"
 				
 			}
 		}
-        $modify  //Limit unlimited runners, Prevent server crashes due to limited to 2048 edict
+                $modify  //Limit unlimited runners, Prevent server crashes due to limited to 2048 edict
 		{
-            "match"
+                        "match"
 			{
 		        "classname"  "npc_template_maker"
 			}
 			"replace"
 			{
-                "SpawnFrequency"    "20"
+                                "SpawnFrequency"    "20"
 				"MaxNPCCount"     "15"
 			}
 		}
@@ -76,18 +76,18 @@
 			}
 		}
   }
-	"entities"  //Casual Mode Respawn Bug Fix
-	{
-	    $modify
+	        "entities"  //Casual Mode Respawn Bug Fix
+	        {
+	        $modify
 		{
-            "match"
+                        "match"
 			{
 				"targetname"   "spawn2"
 			}
 			"replace"
 			{
-            "default_spawn" "0"
-            "spawnflags"    "1"
+                                "default_spawn" "0"
+                                "spawnflags"    "1"
 			}
 		}
 		
