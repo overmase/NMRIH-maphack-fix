@@ -3,5 +3,5 @@
   "pre_entities"
   {
         $remove { "targetname" "phys_azil" }
-	}
+　}
 }
